@@ -1,7 +1,7 @@
 import * as THREE from 'three'
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls"
-import {earth as tierra} from "./src/objects/earth";
-import {markPosition} from "./src/objects/markPosition";
+import {earth as tierra} from "./objects/earth";
+import {markPosition} from "./objects/markPosition";
 
 //sweetalert2
 import Swal from "sweetalert2";
