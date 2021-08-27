@@ -3,14 +3,17 @@ import {OrbitControls} from "./snowpack/pkg/three/examples/jsm/controls/OrbitCon
 import {earth as tierra} from "./objects/earth.js";
 import {markPosition} from "./objects/markPosition.js";
 
-//sweetalert2
+//sweetalert2 para ventana flotante o venta modal
 import Swal from "./snowpack/pkg/sweetalert2.js";
+//exportar css para sweetalet2
 import './snowpack/pkg/sweetalert2/dist/sweetalert2.min.css.proxy.js';
 
+//importar fondo negro
 const starsTextureIMG = './stars.jpg'
 
 const starsTexture = new THREE.TextureLoader().load(starsTextureIMG)
-//Raycasting se usa para seleccionar con el mouse (determinar qué objetos en el espacio 3D está sobre el mouse) entre otras cosas.
+
+    //Raycasting se usa para seleccionar con el mouse (determinar qué objetos en el espacio 3D está sobre el mouse) entre otras cosas.
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 const position = new THREE.Spherical();
