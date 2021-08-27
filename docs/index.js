@@ -54,7 +54,14 @@ function onMouseMove(event) {
         //se convierte los valos de la interseccion xyz en latitud y longitud
         let [lat, lng] = vector3ToLatLng(intersects[i].point)
 
-        //usando api geocode de opencagedata, no se uso google api porque es de paga
+        /**
+         * usando api geocode de opencagedata, no se uso google api porque es de paga
+         * para obtener datos de una ciudad se debe utilizar el link:
+         * https://api.opencagedata.com/geocode/v1/json?q=${lat}%2C+${lng}&key=b72194cb61a542cf8644a0f87f93a790
+         * donde lat es la titudud y lng es la longitud. Tambien existe un parametro para api key es decir la api o link
+         * esta restringida por llave de seguridad.
+         * el link obtiene datos de una coordanada lat,lng
+         */
         fetch(`https://api.opencagedata.com/geocode/v1/json?q=${lat}%2C+${lng}&key=b72194cb61a542cf8644a0f87f93a790`)
             .then(response => response.json())
             .then(data => Swal.fire({
@@ -179,7 +186,10 @@ setPosition.addEventListener('click', function () {
 
 //detectar click en boton 'buscar'
 document.getElementById('searchCity').addEventListener('click', function () {
-    //usar api geocode de opencagedata porque google api es de paga
+    /**
+     * uso de api geocode de opencagedata, se manda por parametro el nombre de la ciudad del que se quiere obtener su latitud y longitud
+     * https://api.opencagedata.com/geocode/v1/geojson?q=${NOMBRE_DE_LA_CIUDAD}&key=API_KEY
+     */
     fetch(`https://api.opencagedata.com/geocode/v1/geojson?q=${document.getElementById('cityName').value}&key=b72194cb61a542cf8644a0f87f93a790`)
         .then(response => response.json())
         .then(data => setMarkPositionFromLatLonRad(data.features[0].geometry.coordinates[1], data.features[0].geometry.coordinates[0]));
