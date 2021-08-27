@@ -1,0 +1,30 @@
+{
+  "name": "threejs-planeta",
+  "version": "1.0.0",
+  "description": "threejs planeta",
+  "main": "index.js",
+  "dependencies": {
+    "three": "^0.131.3"
+  },
+  "devDependencies": {
+    "snowpack": "^3.8.6",
+    "sweetalert2": "^11.1.4"
+  },
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruiborda/threejs-planeta.git"
+  },
+  "keywords": [
+    "threejs"
+  ],
+  "author": "ruiborda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ruiborda/threejs-planeta/issues"
+  },
+  "homepage": "https://github.com/ruiborda/threejs-planeta#readme"
+}
