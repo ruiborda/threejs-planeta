@@ -6,5 +6,10 @@ export default {
     buildOptions:{
         out:'docs',
         metaUrlPath:'snowpack'
-    }
+    },
+    optimize: {
+        bundle: true,
+        minify: true,
+        target: 'es2020',
+    },
 };

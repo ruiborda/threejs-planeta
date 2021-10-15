@@ -1,8 +1,0 @@
-{
-  "imports": {
-    "sweetalert2": "./sweetalert2.js",
-    "sweetalert2/dist/sweetalert2.min.css": "./sweetalert2/dist/sweetalert2.min.css",
-    "three": "./three.js",
-    "three/examples/jsm/controls/OrbitControls": "./three/examples/jsm/controls/OrbitControls.js"
-  }
-}
